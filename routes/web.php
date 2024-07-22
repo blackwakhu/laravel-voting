@@ -21,7 +21,12 @@ Route::get('/', function () {
 
 
 // routes for questions
+Route::get("/questions", [QuestionsController::class, 'index'])->name('questions.index');
+
 Route::get('/questions/create', [QuestionsController::class, 'create'])->name('questions.create');
+
+Route::post('/questions/store', [QuestionsController::class, 'store'])->name('questions.store');
+
 
 // routes for choices
 Route::get("/choices/create", [ChoicesController::class, 'create'])->name('choices.create');

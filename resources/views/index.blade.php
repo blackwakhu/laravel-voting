@@ -5,6 +5,7 @@
       Create Question
     </a>
   </li>
+  <hr/>
   <li>
     <a href="{{ route('choices.create') }}">
       Create Choice
