@@ -7,4 +7,7 @@ use Illuminate\Http\Request;
 class ChoicesController extends Controller
 {
     //
+    public function create(){
+        return view('new-choice-form');
+    }
 }

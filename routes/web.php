@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\ChoicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+
+// routes for questions
+Route::get('/questions/create', [QuestionsController::class, 'create'])->name('questions.create');
+
+// routes for choices
+Route::get("/choices/create", [ChoicesController::class, 'create'])->name('choices.create');
