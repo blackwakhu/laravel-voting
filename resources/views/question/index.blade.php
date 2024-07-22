@@ -1,3 +1,7 @@
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="{{ route('questions.create')}}">New Question</a></li>
+</ul>
 <h1>All the questions</h1>
 <table>
   <thead>
