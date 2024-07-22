@@ -2,3 +2,5 @@ php artisan make:migration <migration_name>
 php artisan migrate
 \nphp artisan make:model question
 \nphp artisan make:controller QuestionsController
+\nphp artisan make:migration add_column_votes_to_choice
+\nphp artisan migrate
