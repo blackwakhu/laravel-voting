@@ -9,6 +9,6 @@ class choices extends Model
 {
     use HasFactory;
     public function question(){
-        return $this->belongsTo(question::class);
+        return $this->belongsTo(questions::class);
     }
 }

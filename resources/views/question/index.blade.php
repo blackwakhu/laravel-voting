@@ -10,7 +10,7 @@
     @foreach ($questions as $question)
       <tr>
         <td>{{ $question->id }}</td>
-        <td>{{ $question->question }}</td>
+        <td>{{ $question->question_text }}</td>
       </tr>
     @endforeach
   </tbody>

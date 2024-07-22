@@ -21,7 +21,7 @@ class QuestionsController extends Controller
     // 
     public function store(Request $request){
         $question = question::create([
-            'question' => $request->input('question')
+            'question_text' => $request->input('question')
         ]);
         return redirect()
             ->route('questions.index')

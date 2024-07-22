@@ -11,4 +11,9 @@ class question extends Model
     public function choices(){
         return $this->hasMany(choices::class);
     }
+
+    protected $fillable = [
+        'question_text',
+        // Add any other fillable attributes here
+    ];
 }
