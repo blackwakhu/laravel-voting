@@ -11,4 +11,9 @@ class choices extends Model
     public function question(){
         return $this->belongsTo(questions::class);
     }
+
+    protected $fillable = [
+        'choice_text',
+        // Add any other fillable attributes here
+    ]
 }

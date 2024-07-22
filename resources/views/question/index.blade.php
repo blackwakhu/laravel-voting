@@ -15,6 +15,11 @@
       <tr>
         <td>{{ $question->id }}</td>
         <td>{{ $question->question_text }}</td>
+        <td>
+          <a href="{{ route('choices.create', $question) }}">
+            New Choice
+          </a>
+        </td>
       </tr>
     @endforeach
   </tbody>

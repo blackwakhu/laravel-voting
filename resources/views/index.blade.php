@@ -12,8 +12,8 @@
   </li>
   <hr/>
   <li>
-    <a href="{{ route('choices.create') }}">
-      Create Choice
+    <a href="{{ route('choices.index') }}">
+      All Choices
     </a>
   </li>
 </ul>
