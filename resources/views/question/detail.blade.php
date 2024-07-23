@@ -9,9 +9,20 @@
 
   
   <p>{{ $quest->question_text }}</p>
-  <a href="{{ route('choices.create', $quest) }}">
+  <!-- <a href="{{ route('choices.create', $quest) }}">
     New Choice
-  </a>
+  </a> -->
+  <button>
+    New Choice
+  </button>
+  <div class="new-choice-detail">
+    <form action="{{ route('choices.store', $quest) }}" method="POST">
+      @csrf
+      <label for="choice">Choice</label>
+      <input type="text" id="choice" name="choice"/>
+      <input type="submit" value="Submit"/>
+    </form>
+  </div>
   <table>
     <tbody>
     @foreach ( $quest->choices as $choice )

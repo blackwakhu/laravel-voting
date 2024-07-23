@@ -24,7 +24,7 @@ class QuestionsController extends Controller
             'question_text' => $request->input('question')
         ]);
         return redirect()
-            ->route('questions.index')
+            ->route('questions.detail', ['quest' => $question])
             ->with("success", "question created successfully");
     }
     // shows a single question with corresponding choices
