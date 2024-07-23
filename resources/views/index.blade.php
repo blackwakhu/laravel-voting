@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'My Page Title')
+@section('title', 'Index page')
 
 @section('content')
   <h1>Hello and welcome to the pollster application</h1>
