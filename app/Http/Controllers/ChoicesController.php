@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Choice;
+use App\Models\choices;
 use App\Models\Question;
 
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class ChoicesController extends Controller
     }
     // 
     public function store(Request $request, Question $quest){
-        $choice = Choice::create([
+        $choice = choices::create([
             'choice_text' => $request->input('choice'),
             'question_id' => $quest->id
         ]);
