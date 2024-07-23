@@ -58,3 +58,7 @@ Route::post("choices/store/{quest}",
 Route::get("/choices/delete/{choice}", 
         [ChoicesController::class, 'delete'])
     ->name('choices.delete');
+
+Route::put("/choices/vote/{choice}", 
+        [ChoicesController::class, 'vote'])
+    ->name('choices.vote');

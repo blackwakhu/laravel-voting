@@ -9,14 +9,23 @@
 
   
   <p>{{ $quest->question_text }}</p>
-
+  <a href="{{ route('choices.create', $quest) }}">
+    New Choice
+  </a>
   <table>
     <tbody>
     @foreach ( $quest->choices as $choice )
       <tr>
-        <td>{{ $choice->id }}</td>
+        <td>{{ $loop->iteration }}</td>
         <td>{{ $choice->choice_text }}</td>
         <td>{{ $choice->votes }}</td>
+        <td>
+          <form method="POST" action="{{route('choices.vote', $choice)}}">
+            @csrf
+            @method('PUT')
+            <input type='submit' value='vote'/>
+          </form>
+        </td>
         <td>
           <button>
             <a href="{{ route('choices.delete', $choice) }}"> 
