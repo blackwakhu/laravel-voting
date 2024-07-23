@@ -29,4 +29,11 @@ class ChoicesController extends Controller
             ->route('questions.detail', ['quest' => $quest])
             ->with('success', "choice created successfully");
     }
+    // 
+    public function delete(Choice $choice){
+        $choice->forceDelete();
+        return redirect()
+            ->route('questions.detail', ['quest' => $choice->question])
+            ->with('success', "choice deleted successfully");
+    }
 }

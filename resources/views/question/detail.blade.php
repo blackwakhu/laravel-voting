@@ -4,12 +4,26 @@
 
 @section('content')
   <h1>Question</h1>
+
   
   <p>{{ $quest->question_text }}</p>
-  
-  <ul>
+
+  <table>
+    <tbody>
     @foreach ( $quest->choices as $choice )
-      <li>{{ $choice->choice_text }}</li>
+      <tr>
+        <td>{{ $choice->id }}</td>
+        <td>{{ $choice->choice_text }}</td>
+        <td>{{ $choice->votes }}</td>
+        <td>
+          <button>
+            <a href="{{ route('choices.delete', $choice) }}"> 
+              delete
+            </a>
+          </button>
+        </td>
+      </tr>
     @endforeach
-  </ul>
+    </tbody>
+  </table>
 @endsection
