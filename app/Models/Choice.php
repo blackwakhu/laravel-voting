@@ -15,5 +15,5 @@ class choices extends Model
     protected $fillable = [
         'choice_text',
         // Add any other fillable attributes here
-    ]
+    ];
 }

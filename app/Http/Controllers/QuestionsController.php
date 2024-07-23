@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\question;
+use App\Models\Question;
 
 use Illuminate\Http\Request;
 
@@ -11,7 +11,7 @@ class QuestionsController extends Controller
 {
     // 
     public function index(){
-        $questions = question::all();
+        $questions = Question::all();
         return view('question/index', compact('questions'));
     }
     // 
@@ -20,7 +20,7 @@ class QuestionsController extends Controller
     }
     // 
     public function store(Request $request){
-        $question = question::create([
+        $question = Question::create([
             'question_text' => $request->input('question')
         ]);
         return redirect()

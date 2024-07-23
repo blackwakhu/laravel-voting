@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\choices;
-use App\Models\question;
+use App\Models\Choice;
+use App\Models\Question;
 
 use Illuminate\Http\Request;
 
@@ -11,22 +11,22 @@ class ChoicesController extends Controller
 {
     // 
     public function index(){
-        $choices = choices::all();
+        $choices = Choice::all();
         return view('choice/index', compact('choices'));
     }
     //
-    public function create(question $quest){
+    public function create(Question $quest){
         $question_txt = $quest->question_text;
         return view('choice/new-form', compact('question_txt', 'quest'));
     }
     // 
-    public function store(Request $request, question $quest){
-        $choice = choices::create([
+    public function store(Request $request, Question $quest){
+        $choice = Choice::create([
             'choice_text' => $request->input('choice'),
             'question_id' => $quest->id
         ]);
         return redirect()
             ->route('questions.index')
-            ->with("success", "choice created successfully");
+            ->with('success', "choice created successfully");
     }
 }
