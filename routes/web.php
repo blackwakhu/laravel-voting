@@ -32,6 +32,10 @@ Route::post('/questions/store',
             [QuestionsController::class, 'store'])
     ->name('questions.store');
 
+Route::get('/questions/detail/{quest}', 
+           [QuestionsController::class, 'detail'])
+    ->name('questions.detail');
+
 
 
 // routes for choices

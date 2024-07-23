@@ -27,5 +27,10 @@ class QuestionsController extends Controller
             ->route('questions.index')
             ->with("success", "question created successfully");
     }
+    // 
+    public function detail(Question $quest){
+        $quest->load('choices');
+        return view("question/detail", compact('quest'));
+    }
 
 }
