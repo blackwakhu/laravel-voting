@@ -4,3 +4,4 @@ php artisan migrate
 \nphp artisan make:controller QuestionsController
 \nphp artisan make:migration add_column_votes_to_choice
 \nphp artisan migrate
+php artisan make:model Question -m
