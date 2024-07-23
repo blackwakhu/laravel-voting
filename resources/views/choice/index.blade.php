@@ -19,7 +19,7 @@
         <tr>
           <td>{{ $choice->id }}</td>
           <td>{{ $choice->choice_text }}</td>
-          <td>{{ $choice->question_id }}</td>
+          <td>{{ $choice->question->question_text }}</td>
           <td>{{ $choice->votes }}</td>
         </tr>
       @endforeach

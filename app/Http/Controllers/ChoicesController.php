@@ -11,7 +11,7 @@ class ChoicesController extends Controller
 {
     // 
     public function index(){
-        $choices = Choice::all();
+        $choices = Choice::with('question')->get();
         return view('choice/index', compact('choices'));
     }
     //
@@ -26,7 +26,7 @@ class ChoicesController extends Controller
             'question_id' => $quest->id
         ]);
         return redirect()
-            ->route('questions.index')
+            ->route('questions.detail', ['quest' => $quest])
             ->with('success', "choice created successfully");
     }
 }
