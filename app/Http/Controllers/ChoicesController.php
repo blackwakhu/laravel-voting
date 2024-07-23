@@ -11,7 +11,9 @@ class ChoicesController extends Controller
 {
     // 
     public function index(){
-        $choices = Choice::with('question')->get();
+        $choices = Choice::with('question')->get()->filter(function ($choice) {
+            return $choice->question !== null;
+        });
         return view('choice/index', compact('choices'));
     }
     //
