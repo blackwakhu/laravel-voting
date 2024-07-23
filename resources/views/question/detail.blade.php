@@ -1,9 +1,15 @@
-<h1>Question</h1>
+@extends('layouts.layout')
 
-<p>{{ $quest->question_text }}</p>
+@section('title', 'Question Detail')
 
-<ul>
-  @foreach ( $quest->choices as $choice )
-    <li>{{ $choice->choice_text }}</li>
-  @endforeach
-</ul>
+@section('content')
+  <h1>Question</h1>
+  
+  <p>{{ $quest->question_text }}</p>
+  
+  <ul>
+    @foreach ( $quest->choices as $choice )
+      <li>{{ $choice->choice_text }}</li>
+    @endforeach
+  </ul>
+@endsection
