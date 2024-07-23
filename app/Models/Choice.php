@@ -12,4 +12,9 @@ class Choice extends Model
     public function question(){
         return $this->belongsTo(Question::class);
     }
+
+    protected $fillable = [
+        'choice_text',
+        'question_id',
+    ];
 }

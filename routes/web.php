@@ -17,8 +17,7 @@ use App\Http\Controllers\ChoicesController;
 
 Route::get('/', function () {
     return view('index');
-});
-
+})->name('home');
 
 // routes for questions
 Route::get("/questions", 
