@@ -32,5 +32,12 @@ class QuestionsController extends Controller
         $quest->load('choices');
         return view("question/detail", compact('quest'));
     }
+    // 
+    public function delete(Question $quest){
+        $quest->delete();
+        return redirect()
+            ->route('questions.index')
+            ->with("success", "question deleted successfully");
+    }
 
 }

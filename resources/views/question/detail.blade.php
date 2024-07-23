@@ -3,6 +3,8 @@
 @section('title', 'Question Detail')
 
 @section('content')
+  <a href="{{ route('home') }}">home</a>
+  <a href="{{ route('questions.index') }}">All Questions</a>
   <h1>Question</h1>
 
   

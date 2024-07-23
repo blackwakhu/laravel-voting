@@ -21,36 +21,40 @@ Route::get('/', function () {
 
 // routes for questions
 Route::get("/questions", 
-    [QuestionsController::class, 'index'])
+        [QuestionsController::class, 'index'])
     ->name('questions.index');
 
 Route::get('/questions/create', 
-    [QuestionsController::class, 'create'])
+        [QuestionsController::class, 'create'])
     ->name('questions.create');
 
 Route::post('/questions/store', 
-     [QuestionsController::class, 'store'])
+        [QuestionsController::class, 'store'])
     ->name('questions.store');
 
 Route::get('/questions/detail/{quest}', 
-    [QuestionsController::class, 'detail'])
+           [QuestionsController::class, 'detail'])
     ->name('questions.detail');
+
+Route::get('/questions/delete/{quest}', 
+           [QuestionsController::class, 'delete'])
+    ->name('questions.delete');
 
 
 
 // routes for choices
 Route::get("/choices", 
-    [ChoicesController::class, 'index'])
+        [ChoicesController::class, 'index'])
     ->name('choices.index');
 
 Route::get("/choices/create/{quest}", 
-    [ChoicesController::class, 'create'])
+        [ChoicesController::class, 'create'])
     ->name('choices.create');
 
 Route::post("choices/store/{quest}", 
-    [ChoicesController::class, 'store'])
+        [ChoicesController::class, 'store'])
     ->name('choices.store');
 
 Route::get("/choices/delete/{choice}", 
-    [ChoicesController::class, 'delete'])
+        [ChoicesController::class, 'delete'])
     ->name('choices.delete');

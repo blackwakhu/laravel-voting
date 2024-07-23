@@ -23,11 +23,18 @@
             <a href="{{ route('questions.detail', $question) }}">
               {{ $question->question_text }}
             </a>
-            </td>
+          </td>
           <td>
             <a href="{{ route('choices.create', $question) }}">
               New Choice
             </a>
+          </td>
+          <td>
+            <button>
+              <a href="{{ route('questions.delete', $question)}}">
+                Delete
+              </a>
+            </button>
           </td>
         </tr>
       @endforeach

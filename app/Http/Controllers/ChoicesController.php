@@ -31,7 +31,7 @@ class ChoicesController extends Controller
     }
     // 
     public function delete(Choice $choice){
-        $choice->forceDelete();
+        $choice->delete();
         return redirect()
             ->route('questions.detail', ['quest' => $choice->question])
             ->with('success', "choice deleted successfully");
