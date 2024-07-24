@@ -42,3 +42,76 @@ nav{
   text-align: center;
   font-size: 2.8em;
 }
+
+/* questions views */
+/* questions-index page */
+
+.index-questions h1#title{
+  text-align: center;
+  font-size: 2.8em;
+}
+
+.btn{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.delete-btn{
+  color: red;
+  background: inherit;
+  border: red 2px solid;
+}
+
+.delete-btn a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.delete-btn:hover{
+  background: red;
+  color: white;
+  text-decoration: underline;
+}
+
+.add-btn{
+  border: #0080c0 2px solid;
+  color: #0080c0;
+  background: inherit;
+}
+
+.add-btn a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.add-btn:hover{
+  background: #0080c0;
+  color: white;
+  text-decoration: underline;
+}
+
+.index-questions-table{
+  margin-left: 10%;
+}
+
+.index-questions-table tr td{
+  padding: 5px;
+}
+
+.index-question-table-title{
+  padding: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.index-question-table-title a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.index-question-table-title:hover{
+  color: #0080ff;
+  text-decoration: underline;
+  font-style: italic;
+}
+
