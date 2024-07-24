@@ -3,6 +3,7 @@ body{
     /* background: pink; */
 }
 
+/* navbar */
 nav{
   width: 100%;
   position: sticky;
@@ -33,4 +34,11 @@ nav{
 
 .navbar a.active:hover{
   color: gold;
+}
+
+/* index  */
+
+.index-page h1#title{
+  text-align: center;
+  font-size: 2.8em;
 }
