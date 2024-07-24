@@ -125,7 +125,7 @@ header{
 
 /* new form questions  */
 
-.new-form-questions h1#title, .new-form-choice h1#title{
+.new-form-questions h1#title, .new-form-choice h1#title, .index-choice h1#title{
   text-align: center;
   font-size: 2.8em;
   margin-top: 25px;
@@ -194,7 +194,7 @@ header{
   border: inset 2px black;
 }
 
-.question-detail-table{
+.question-detail-table, .index-choice-table{
   width: 70%;
   margin-left: 10%;
   margin-top: 20px;
@@ -202,6 +202,31 @@ header{
 
 
 /* choices */
+
+/* index choice page */
+.index-choice-table, .index-choice-table th, .index-choice-table td{
+  border-collapse: collapse;
+  padding: 6px;
+  text-align: center;
+  border: inset 2px black;
+}
+
+.index-choice-table-a{
+  color: black;
+  text-decoration: none;
+}
+
+.index-choice-table-a a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.index-choice-table-a:hover{
+  text-decoration: underline;
+  font-style: italic;
+  color: var(--light-blue);
+}
+
 /* create choice page */
 
 .new-form-choice p#question-text, .question-detail p#question-text{
