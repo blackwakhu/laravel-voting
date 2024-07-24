@@ -6,15 +6,17 @@ body{
 :root{
   --blue: #0080c0;
   --light-blue: #0080ff;
+  --green: #42a636;
 }
 
 /* navbar */
-nav{
+header{
   width: 100%;
   position: sticky;
   top: 0;
   padding: 10px;
   border-bottom: 2px inset black;
+  background: rgba(255, 255, 255, .7);
 }
 
 .navbar{
@@ -51,7 +53,7 @@ nav{
 /* questions views */
 /* questions-index page */
 
-.index-questions h1#title{
+.index-questions h1#title, .question-detail h1#title{
   text-align: center;
   font-size: 2.8em;
 }
@@ -129,7 +131,7 @@ nav{
   margin-top: 25px;
 }
 
-.new-question-form, .new-choice-form{
+.new-question-form, .new-choice-form, .new-choice-detail-form{
   width: 70%;
   margin-left: 15%;
   border: inset 1px black;
@@ -137,7 +139,7 @@ nav{
   padding: 20px;
 }
 
-.new-question-form input[type='text'], .new-choice-form input[type='text']{
+.new-question-form input[type='text'], .new-choice-form input[type='text'], .new-choice-detail-form input[type='text']{
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -149,17 +151,17 @@ nav{
 }
 
 .submit-btn{
-  color: #42a636;
-  border: solid 2px #42a636;
+  color: var(--green);
+  border: solid 2px var(--green);
   background: white;
 }
 
 .submit-btn:hover{
   color: white;
-  background: #42a636;
+  background: var(--green);
 }
 
-.new-question-form input[type='submit'], .new-choice-form input[type='submit']{
+.new-question-form input[type='submit'], .new-choice-form input[type='submit'], .new-choice-detail-form input[type='text']{
   margin-left: 30%;
   width: 35%
 }
@@ -167,6 +169,9 @@ nav{
 /* detail page */
 .new-choice-detail{
   display: none;
+  padding: 20px;
+  width: 100%;
+  margin: 5px;
 }
 
 .hide-new-choice-btn{
@@ -182,22 +187,31 @@ nav{
   background: var(--light-blue);
 }
 
+.question-detail-table, .question-detail-table th, .question-detail-table td{
+  border-collapse: collapse;
+  padding: 6px;
+  text-align: center;
+  border: inset 2px black;
+}
 
-
-
+.question-detail-table{
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
 
 
 /* choices */
 /* create choice page */
 
-.new-form-choice p#question-text{
+.new-form-choice p#question-text, .question-detail p#question-text{
   text-align: center;
   text-decoration: none;
   color: black;
   font-size: 2.5em;
 }
 
-.new-form-choice p#question-text:hover{
+.new-form-choice p#question-text:hover, .question-detail p#question-text:hover{
   text-decoration: underline;
   font-style: italic;
   color: var(--light-blue);
