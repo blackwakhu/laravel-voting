@@ -121,9 +121,10 @@ nav{
 .new-form-questions h1#title, .new-form-choice h1#title{
   text-align: center;
   font-size: 2.8em;
+  margin-top: 25px;
 }
 
-.new-question-form, .new-form-choice{
+.new-question-form, .new-choice-form{
   width: 70%;
   margin-left: 15%;
   border: inset 1px black;
@@ -156,4 +157,22 @@ nav{
 .new-question-form input[type='submit'], .new-choice-form input[type='submit']{
   margin-left: 30%;
   width: 35%
+}
+
+
+/* choices */
+/* create choice page */
+
+.new-form-choice p#question-text{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 2.5em;
+}
+
+.new-form-choice p#question-text:hover{
+  text-decoration: underline;
+  font-style: italic;
+  color: #0080ff;
+  font-size: 2em;
 }

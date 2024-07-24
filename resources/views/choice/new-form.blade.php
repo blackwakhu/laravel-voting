@@ -4,7 +4,12 @@
 
 @section('content')
   <div class="new-form-choice">
-    <h1 id="title">New Choice for: {{$question_txt}}</h1>
+    <h1 id="title">New Choice for: </h1>
+    <p id='question-text'>
+      <a href="{{ route('questions.detail', $quest) }}">
+        {{$question_txt}}
+      </a>
+    </p>
     <form action="{{ route('choices.store', $quest) }}" method="POST" class="new-choice-form">
       @csrf
       <label for="choice">Choice</label>
