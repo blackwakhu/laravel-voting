@@ -54,6 +54,7 @@ nav{
 .btn{
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .delete-btn{
@@ -113,4 +114,45 @@ nav{
   color: #0080ff;
   text-decoration: underline;
   font-style: italic;
+}
+
+/* new form questions  */
+
+.new-form-questions h1#title{
+  text-align: center;
+  font-size: 2.8em;
+}
+
+.new-question-form{
+  width: 70%;
+  margin-left: 15%;
+  border: inset 1px black;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.new-question-form input[type='text']{
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: outset black 2px;
+  outline: none;
+  cursor: text;
+}
+
+.submit-btn{
+  color: #42a636;
+  border: solid 2px #42a636;
+  background: white;
+}
+
+.submit-btn:hover{
+  color: white;
+  background: #42a636;
+}
+
+.new-question-form input[type='submit']{
+  margin-left: 30%;
+  width: 35%
 }
