@@ -3,6 +3,11 @@ body{
     /* background: pink; */
 }
 
+:root{
+  --blue: #0080c0;
+  --light-blue: #0080ff;
+}
+
 /* navbar */
 nav{
   width: 100%;
@@ -75,8 +80,8 @@ nav{
 }
 
 .add-btn{
-  border: #0080c0 2px solid;
-  color: #0080c0;
+  border: var(--blue) 2px solid;
+  color: var(--blue);
   background: inherit;
 }
 
@@ -86,7 +91,7 @@ nav{
 }
 
 .add-btn:hover{
-  background: #0080c0;
+  background: var(--blue);
   color: white;
   text-decoration: underline;
 }
@@ -111,7 +116,7 @@ nav{
 }
 
 .index-question-table-title:hover{
-  color: #0080ff;
+  color: var(--light-blue);
   text-decoration: underline;
   font-style: italic;
 }
@@ -159,6 +164,28 @@ nav{
   width: 35%
 }
 
+/* detail page */
+.new-choice-detail{
+  display: none;
+}
+
+.hide-new-choice-btn{
+  margin-left: 10%;
+  width: 25%;
+  color: var(--light-blue);
+  border: 2px outset var(--light-blue);
+  background: white;
+}
+
+.hide-new-choice-btn:hover{
+  color: white;
+  background: var(--light-blue);
+}
+
+
+
+
+
 
 /* choices */
 /* create choice page */
@@ -173,6 +200,6 @@ nav{
 .new-form-choice p#question-text:hover{
   text-decoration: underline;
   font-style: italic;
-  color: #0080ff;
+  color: var(--light-blue);
   font-size: 2em;
 }

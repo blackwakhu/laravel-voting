@@ -3,16 +3,11 @@
 @section('title', 'Question Detail')
 
 @section('content')
-  <a href="{{ route('home') }}">home</a>
-  <a href="{{ route('questions.index') }}">All Questions</a>
-  <h1>Question</h1>
 
-  
+  <h1>Question</h1>
   <p>{{ $quest->question_text }}</p>
-  <!-- <a href="{{ route('choices.create', $quest) }}">
-    New Choice
-  </a> -->
-  <button>
+ 
+  <button class="hide-new-choice-btn btn">
     New Choice
   </button>
   <div class="new-choice-detail">
