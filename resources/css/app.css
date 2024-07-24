@@ -118,12 +118,12 @@ nav{
 
 /* new form questions  */
 
-.new-form-questions h1#title{
+.new-form-questions h1#title, .new-form-choice h1#title{
   text-align: center;
   font-size: 2.8em;
 }
 
-.new-question-form{
+.new-question-form, .new-form-choice{
   width: 70%;
   margin-left: 15%;
   border: inset 1px black;
@@ -131,7 +131,7 @@ nav{
   padding: 20px;
 }
 
-.new-question-form input[type='text']{
+.new-question-form input[type='text'], .new-choice-form input[type='text']{
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -139,6 +139,7 @@ nav{
   border-bottom: outset black 2px;
   outline: none;
   cursor: text;
+  text-align: center;
 }
 
 .submit-btn{
@@ -152,7 +153,7 @@ nav{
   background: #42a636;
 }
 
-.new-question-form input[type='submit']{
+.new-question-form input[type='submit'], .new-choice-form input[type='submit']{
   margin-left: 30%;
   width: 35%
 }
